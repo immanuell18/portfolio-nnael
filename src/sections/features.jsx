@@ -26,7 +26,7 @@ export default function Features() {
     ];
 
     return (
-        <section id="skills" className="mt-32">
+        <section id="skills" className="mt-12 md:mt-32">
             <SectionTitle
                 title="My Expertise"
                 description="Core competencies and technical skills that I bring to every project."
