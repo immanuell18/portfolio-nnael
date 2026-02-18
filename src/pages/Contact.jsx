@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
 import { ArrowLeftIcon } from "lucide-react";
+import { Link } from 'react-router-dom';
 
 export default function Contact() {
     return (
         <section className="flex flex-col min-h-screen px-4 md:px-16 lg:px-24">
-            <a href="/" className="fixed top-8 left-8 btn glass flex items-center gap-2">
+            <Link to="/" className="fixed top-8 left-8 btn glass flex items-center gap-2">
                 <ArrowLeftIcon className="size-4" /> Back to Home
-            </a>
+            </Link>
 
             <div className="flex-1 flex flex-col items-center justify-center py-20">
                 <motion.div

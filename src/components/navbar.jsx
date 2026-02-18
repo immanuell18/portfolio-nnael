@@ -1,6 +1,7 @@
 import { MenuIcon, XIcon } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { motion } from "framer-motion";
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -38,9 +39,9 @@ export default function Navbar() {
                 viewport={{ once: true }}
                 transition={{ type: "spring", stiffness: 250, damping: 70, mass: 1 }}
             >
-                <a href='/' className='text-2xl font-bold tracking-tighter'>
+                <Link to='/' className='text-2xl font-bold tracking-tighter'>
                     Portfolio.
-                </a>
+                </Link>
 
                 <div className='hidden items-center space-x-10 md:flex'>
                     {links.map((link) => (
@@ -48,9 +49,9 @@ export default function Navbar() {
                             {link.name}
                         </a>
                     ))}
-                    <a href='/contact' className='btn glass'>
+                    <Link to='/contact' className='btn glass'>
                         Contact Me
-                    </a>
+                    </Link>
                 </div>
 
                 <button onClick={() => setIsOpen(true)} className='transition active:scale-90 md:hidden'>
@@ -66,9 +67,9 @@ export default function Navbar() {
                 ))}
 
 
-                <a href='/contact' className='btn glass' onClick={() => setIsOpen(false)}>
+                <Link to='/contact' className='btn glass' onClick={() => setIsOpen(false)}>
                     Contact Me
-                </a>
+                </Link>
 
                 <button onClick={() => setIsOpen(false)} className='rounded-md p-2 glass'>
                     <XIcon />
