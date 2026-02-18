@@ -7,28 +7,25 @@ export default function FaqSection() {
     const [isOpen, setIsOpen] = useState(false);
     const data = [
         {
-            question: 'What services do you offer?',
-            answer: "I specialize in Full Stack Web Development, UI/UX Design, and Custom Software Solutions using React, Node.js, and modern tools.",
+
+            question: 'Are you available for freelance work?',
+            answer: "Yes! I'm available for small video editing projects or simple web development tasks while I complete my studies.",
         },
         {
-            question: 'What is your typical project timeline?',
-            answer: 'Timelines vary based on complexity. A simple landing page might take 3-5 days, while a full web app could take 2-4 weeks.',
+            question: 'What coding languages are you learning?',
+            answer: 'Currently, I am focusing on PHP, Laravel, Phalcon for backend, and HTML, CSS, Javascript for frontend.',
         },
         {
-            question: 'Do you offer post-launch support?',
-            answer: 'Yes, I provide maintenance packages to ensure your website remains secure, updated, and performing optimally.',
+            question: 'Can you build a full website?',
+            answer: 'I can build basic websites and I am currently improving my full-stack skills with frameworks like React and Laravel.',
         },
         {
-            question: 'What is your pricing model?',
-            answer: 'I offer both project-based (fixed price) and hourly rates depending on the nature of the work. Check the Pricing section for packages.',
+            question: 'What kind of video editing do you do?',
+            answer: 'I can edit gaming highlights, social media clips, and simple promotional videos using Premiere Pro or CapCut.',
         },
         {
-            question: 'Can you redesign an existing website?',
-            answer: "Absolutely! I can audit your current site and propose a modernization plan to improve performance and aesthetics.",
-        },
-        {
-            question: 'How do we communicate during the project?',
-            answer: 'I use Discord, Slack, or Email for updates and schedule regular check-in calls to ensure we stay aligned.',
+            question: 'How can I contact you?',
+            answer: "You can reach me via Instagram DM or Email. Check the contact links below!",
         },
     ];
 

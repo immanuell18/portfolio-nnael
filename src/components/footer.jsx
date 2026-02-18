@@ -1,4 +1,4 @@
-import { DribbbleIcon, GithubIcon, LinkedinIcon, TwitterIcon } from "lucide-react";
+import { GithubIcon, InstagramIcon, LinkedinIcon, TwitterIcon } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function Footer() {
@@ -27,23 +27,21 @@ export default function Footer() {
                 ))}
             </div>
             <div className="flex items-center gap-6 pb-6">
-                <a href="#" className="hover:-translate-y-0.5 text-gray-200 transition-all duration-300">
-                    <DribbbleIcon />
+                <a href="https://instagram.com/nuelg_" target="_blank" className="hover:-translate-y-0.5 text-gray-200 transition-all duration-300">
+                    <InstagramIcon />
                 </a>
-                <a href="#" className="hover:-translate-y-0.5 text-gray-200 transition-all duration-300">
-                    <LinkedinIcon />
+                <a href="https://www.tiktok.com/@nuelg_" target="_blank" className="hover:-translate-y-0.5 text-gray-200 transition-all duration-300">
+                    {/* Lucide doesn't have TikTok icon by default, using Twitter/X icon as placeholder or text */}
+                    <span className="font-bold">TT</span>
                 </a>
-                <a href="#" className="hover:-translate-y-0.5 text-gray-200 transition-all duration-300">
-                    <TwitterIcon />
-                </a>
-                <a href="#" className="hover:-translate-y-0.5 text-gray-200 transition-all duration-300">
+                <a href="https://github.com/immanuell18" target="_blank" className="hover:-translate-y-0.5 text-gray-200 transition-all duration-300">
                     <GithubIcon />
                 </a>
             </div>
             <hr className="w-full border-white/20 mt-6" />
             <div className="flex flex-col md:flex-row items-center w-full justify-between gap-4 py-4">
                 <p>Designed within seconds.</p>
-                <p>Copyright © 2025 • All rights reserved</p>
+                <p>Copyright © 2026 • Portofolio Nael</p>
             </div>
         </motion.footer>
     );

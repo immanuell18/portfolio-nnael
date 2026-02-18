@@ -5,22 +5,22 @@ import { ExternalLinkIcon } from "lucide-react";
 const steps = [
     {
         id: 1,
-        title: "E-Commerce Dashboard",
-        description: "A comprehensive dashboard for managing products, orders, and analytics. Built with React and Recharts.",
+        title: "Freelance Video Editor",
+        description: "Edited gaming highlights, promotional content, and social media videos for various clients.",
         link: "#!",
         image: "/assets/workflow1.png",
     },
     {
         id: 2,
-        title: "AI Chat Interface",
-        description: "Modern chat application with real-time responses, streaming text, and history management.",
+        title: "PlayStation Rental Operator",
+        description: "Managed daily operations, technical troubleshooting, and customer service at a local game rental.",
         link: "#!",
         image: "/assets/workflow2.png",
     },
     {
         id: 3,
-        title: "SaaS Landing Page",
-        description: "High-conversion landing page with complex animations, pricing tables, and responsive layout.",
+        title: "School Web Project",
+        description: "Developed a Library Management System using PHP and Laravel as part of my vocational school curriculum.",
         link: "#!",
         image: "/assets/workflow3.png",
     },
@@ -30,8 +30,8 @@ export default function WorkflowSteps() {
     return (
         <section id="work" className="mt-32 relative">
             <SectionTitle
-                title="Selected Works"
-                description="A showcase of some of my best projects and experiments."
+                title="Experience & Projects"
+                description="My journey so far, from work experience to school projects."
             />
 
             <motion.div className="relative space-y-20 md:space-y-30 mt-20"

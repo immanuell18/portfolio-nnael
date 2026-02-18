@@ -9,19 +9,19 @@ export default function Features() {
 
     const featuresData = [
         {
-            icon: LayoutIcon,
-            title: "Frontend Development",
-            description: "Building responsive, accessible, and performant user interfaces with React & Tailwind.",
+            icon: CodeIcon,
+            title: "Web Development",
+            description: "Experienced in HTML, CSS, JavaScript, and PHP frameworks like Laravel & Phalcon.",
         },
         {
             icon: DatabaseIcon,
-            title: "Backend Development",
-            description: "Creating robust APIs and server-side logic using Node.js and SQL/NoSQL databases.",
+            title: "Video Editing",
+            description: "Proficient in video editing tools for content creation, highlights, and promotional videos.",
         },
         {
-            icon: CodeIcon,
-            title: "Clean Code & Architecture",
-            description: "Writing maintainable, scalable, and well-documented code for long-term success.",
+            icon: LayoutIcon,
+            title: "UI/UX & Design",
+            description: "Designing clean, user-friendly interfaces with a focus on usability and aesthetics.",
         }
     ];
 

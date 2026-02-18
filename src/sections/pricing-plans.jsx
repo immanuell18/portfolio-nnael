@@ -8,48 +8,48 @@ export default function PricingPlans() {
     const data = [
         {
             icon: RocketIcon,
-            title: 'Starter',
-            description: 'For individuals and small teams',
-            price: '$19',
-            buttonText: 'Get Started',
+            title: 'Video Editing',
+            description: 'For content creators & social media',
+            price: 'Editor',
+            buttonText: 'Contact Me',
             features: [
-                'Up to 10 projects',
-                '10 AI tasks/month',
-                'Basic text generation',
-                'Simple chatbot access',
-                'Email support only',
-                'Community resources'
+                'Gaming Highlights',
+                'Social Media Clips',
+                'Basic Transitions',
+                'Sound Effects',
+                'Color Correction',
+                'Fast Turnaround'
             ],
         },
         {
             icon: ZapIcon,
-            title: 'Professional',
-            description: 'For growing teams and startups',
-            price: '$49',
+            title: 'Web Dev (Junior)',
+            description: 'For simple websites & school projects',
+            price: 'Coding',
             mostPopular: true,
-            buttonText: 'Upgrade Now',
+            buttonText: 'Collaborate',
             features: [
-                'Unlimited AI tasks',
-                'API integration',
-                'Text & image outputs',
-                'Priority chat & email support',
-                'Detailed analytics',
-                'Team collaboration'
+                'HTML/CSS/JS',
+                'PHP & MySQL',
+                'Laravel Basics',
+                'Bug Fixing',
+                'Responsive Design',
+                'Frontend Updates'
             ],
         },
         {
             icon: CrownIcon,
-            title: 'Enterprise',
-            description: 'For enterprises and agencies',
-            price: '$149',
-            buttonText: 'Contact Sales',
+            title: 'IT Help / Admin',
+            description: 'Based on my experience',
+            price: 'Support',
+            buttonText: 'Hire Me',
             features: [
-                'Custom AI models',
-                'Team access control',
-                'Dedicated account manager',
-                'Secure private API',
-                'SLA uptime guarantee',
-                '24/7 premium support'
+                'PC Troubleshooting',
+                'Software Installation',
+                'Game Console Support',
+                'Data Entry',
+                'System Maintenance',
+                'General Tech Help'
             ],
         },
     ];
@@ -57,8 +57,8 @@ export default function PricingPlans() {
     return (
         <section id="pricing" className="mt-32">
             <SectionTitle
-                title="Freelance Services"
-                description="Flexible engagement models tailored to your project needs."
+                title="What I Can Do"
+                description="My current skills and services available for freelance or collaboration."
             />
 
             <div className='mt-12 flex flex-wrap items-center justify-center gap-6'>
@@ -81,7 +81,7 @@ export default function PricingPlans() {
                             <span>{item.title}</span>
                         </div>
                         <h3 className='mt-4 text-2xl font-semibold'>
-                            {item.price} <span className='text-sm font-normal'>/month</span>
+                            {item.price}
                         </h3>
                         <p className='text-gray-200 mt-3'>{item.description}</p>
                         <button className={`mt-7 rounded-md w-full btn ${item.mostPopular ? 'bg-white text-gray-800' : 'glass'}`}>
