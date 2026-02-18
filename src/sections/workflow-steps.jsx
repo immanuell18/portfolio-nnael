@@ -28,7 +28,7 @@ const steps = [
 
 export default function WorkflowSteps() {
     return (
-        <section id="work" className="mt-32 relative">
+        <section id="work" className="mt-32 relative scroll-mt-28">
             <SectionTitle
                 title="Experience & Projects"
                 description="My journey so far, from work experience to school projects."
@@ -68,10 +68,7 @@ export default function WorkflowSteps() {
                             <p className="text-gray-100 text-sm/6 line-clamp-3 pb-2">
                                 {step.description}
                             </p>
-                            <a href={step.link} className="flex items-center gap-2">
-                                View Project
-                                <ExternalLinkIcon className="size-4" />
-                            </a>
+                            {/* Removed View Project link as per user request */}
                         </div>
                     </motion.div>
                 ))}

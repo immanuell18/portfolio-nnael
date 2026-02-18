@@ -56,7 +56,7 @@ export default function PricingPlans() {
     ];
 
     return (
-        <section id="pricing" className="mt-32">
+        <section id="services" className="relative mt-32 scroll-mt-28">
             <SectionTitle
                 title="What I Can Do"
                 description="My current skills and services available for freelance or collaboration."
