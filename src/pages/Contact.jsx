@@ -1,24 +1,36 @@
 import { motion } from "framer-motion";
-import { ArrowLeftIcon, SendIcon, CheckCircleIcon } from "lucide-react";
+import { ArrowLeftIcon, SendIcon, CheckCircleIcon, Loader2 } from "lucide-react";
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
 export default function Contact() {
     const [selectedService, setSelectedService] = useState('Web Development');
+    const [formStatus, setFormStatus] = useState('idle'); // idle, submitting, success, error
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
+        setFormStatus('submitting');
+
         const formData = new FormData(e.target);
-        const firstName = formData.get('first_name');
-        const lastName = formData.get('last_name');
-        const email = formData.get('email');
-        const message = formData.get('message');
+        // Add selected service manually since it's not a standard input
+        formData.append('service', selectedService);
+        formData.append('_template', 'table');
+        formData.append('_captcha', 'false');
 
-        const fullName = `${firstName} ${lastName}`;
-        const subject = `Portfolio Inquiry: ${selectedService} - ${fullName}`;
-        const body = `Name: ${fullName}\nEmail: ${email}\nService: ${selectedService}\n\nMessage:\n${message}`;
+        try {
+            const response = await fetch("https://formsubmit.co/ajax/ellrz1718@gmail.com", {
+                method: "POST",
+                body: formData
+            });
 
-        window.location.href = `mailto:ellrz1718@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            if (response.ok) {
+                setFormStatus('success');
+            } else {
+                setFormStatus('error');
+            }
+        } catch (error) {
+            setFormStatus('error');
+        }
     };
 
     const services = [
@@ -27,6 +39,39 @@ export default function Contact() {
         "IT Support",
         "Other"
     ];
+
+    if (formStatus === 'success') {
+        return (
+            <section className="min-h-screen bg-black text-white flex flex-col items-center justify-center p-6 relative overflow-hidden">
+                {/* Background Gradients */}
+                <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+                    <div className="absolute top-1/4 right-1/4 size-96 bg-purple-600 rounded-full blur-[150px] opacity-20" />
+                    <div className="absolute bottom-1/4 left-1/4 size-96 bg-blue-600 rounded-full blur-[150px] opacity-20" />
+                </div>
+
+                <Link to="/" className="absolute top-8 left-8 flex items-center gap-2 text-sm text-gray-400 hover:text-white transition z-50">
+                    <ArrowLeftIcon className="size-4" /> Back to Home
+                </Link>
+
+                <motion.div
+                    initial={{ scale: 0.9, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    className="max-w-md w-full glass p-10 rounded-2xl text-center border border-white/10"
+                >
+                    <div className="size-20 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <CheckCircleIcon className="size-10 text-green-500" />
+                    </div>
+                    <h2 className="text-3xl font-bold mb-4">Message Sent!</h2>
+                    <p className="text-gray-300 mb-8">
+                        Thanks for reaching out! I've received your message and will get back to you as soon as possible.
+                    </p>
+                    <Link to="/" className="btn bg-white text-black hover:bg-gray-200 font-bold py-3 px-8 rounded-lg inline-block transition">
+                        Back to Home
+                    </Link>
+                </motion.div>
+            </section>
+        );
+    }
 
     return (
         <section className="min-h-screen bg-black text-white flex flex-col lg:flex-row">
@@ -91,10 +136,26 @@ export default function Contact() {
                                 className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition resize-none" />
                         </div>
 
-                        <button type="submit" className="w-full btn bg-white text-black hover:bg-gray-200 font-bold py-4 rounded-lg flex items-center justify-center gap-2 transition-all mt-4">
-                            Send Message
-                            <SendIcon className="size-4" />
+                        <button
+                            type="submit"
+                            disabled={formStatus === 'submitting'}
+                            className="w-full btn bg-white text-black hover:bg-gray-200 font-bold py-4 rounded-lg flex items-center justify-center gap-2 transition-all mt-4 disabled:opacity-70 disabled:cursor-not-allowed"
+                        >
+                            {formStatus === 'submitting' ? (
+                                <>
+                                    <Loader2 className="size-5 animate-spin" />
+                                    Sending...
+                                </>
+                            ) : (
+                                <>
+                                    Send Message
+                                    <SendIcon className="size-4" />
+                                </>
+                            )}
                         </button>
+                        {formStatus === 'error' && (
+                            <p className="text-red-400 text-sm text-center">Something went wrong. Please try again later.</p>
+                        )}
                     </form>
                 </motion.div>
             </div>
