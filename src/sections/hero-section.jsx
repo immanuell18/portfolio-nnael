@@ -16,7 +16,7 @@ export default function HeroSection() {
                 <div className="absolute rounded-full top-0 left-1/2 -translate-x-1/2 size-130 bg-[#F26A06] blur-[100px]" />
             </motion.div>
             <motion.section className="flex flex-col items-center">
-                <motion.div className="flex items-center gap-3 mt-24 md:mt-32"
+                <motion.div className="flex items-center gap-3 mt-12 md:mt-32"
                     initial={{ y: -20, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     viewport={{ once: true }}
@@ -44,7 +44,7 @@ export default function HeroSection() {
                     A passionate Full Stack Developer creating modern, responsive, and user-centric web applications.
                 </motion.p>
 
-                <motion.div className="flex flex-col md:flex-row max-md:w-full items-center gap-4 md:gap-3 mt-8 md:mt-6"
+                <motion.div className="flex flex-col md:flex-row max-md:w-full items-center gap-4 md:gap-3 mt-6"
                     initial={{ y: 50, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     viewport={{ once: true }}
