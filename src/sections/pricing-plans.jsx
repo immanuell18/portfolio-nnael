@@ -84,9 +84,9 @@ export default function PricingPlans() {
                             {item.price}
                         </h3>
                         <p className='text-gray-200 mt-3'>{item.description}</p>
-                        <button className={`mt-7 rounded-md w-full btn ${item.mostPopular ? 'bg-white text-gray-800' : 'glass'}`}>
+                        <a href="/contact" className={`mt-7 rounded-md w-full btn flex justify-center ${item.mostPopular ? 'bg-white text-gray-800' : 'glass'}`}>
                             {item.buttonText}
-                        </button>
+                        </a>
                         <div className='mt-6 flex flex-col'>
                             {item.features.map((feature, index) => (
                                 <div key={index} className='flex items-center gap-2 py-2'>

@@ -8,14 +8,14 @@ const steps = [
         title: "Freelance Video Editor",
         description: "Edited gaming highlights, promotional content, and social media videos for various clients.",
         link: "#!",
-        image: "/assets/workflow1.png",
+        image: "/assets/workflow1.avif",
     },
     {
         id: 2,
         title: "PlayStation Rental Operator",
         description: "Managed daily operations, technical troubleshooting, and customer service at a local game rental.",
         link: "#!",
-        image: "/assets/workflow2.png",
+        image: "/assets/workflow2.jpg",
     },
     {
         id: 3,

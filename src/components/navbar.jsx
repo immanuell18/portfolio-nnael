@@ -48,7 +48,7 @@ export default function Navbar() {
                             {link.name}
                         </a>
                     ))}
-                    <a href='#contact' className='btn glass'>
+                    <a href='/contact' className='btn glass'>
                         Contact Me
                     </a>
                 </div>
@@ -66,7 +66,7 @@ export default function Navbar() {
                 ))}
 
 
-                <a href='#contact' className='btn glass' onClick={() => setIsOpen(false)}>
+                <a href='/contact' className='btn glass' onClick={() => setIsOpen(false)}>
                     Contact Me
                 </a>
 

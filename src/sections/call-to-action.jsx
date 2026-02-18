@@ -25,7 +25,7 @@ export default function CallToAction() {
             >
                 Have a project in mind? Let's turn your ideas into functional, beautiful digital products.
             </motion.p>
-            <motion.button className="btn glass transition-none flex items-center gap-2 mt-8"
+            <motion.a href="/contact" className="btn glass transition-none flex items-center gap-2 mt-8"
                 initial={{ y: 80, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true }}
@@ -33,7 +33,7 @@ export default function CallToAction() {
             >
                 Get In Touch
                 <ArrowRightIcon className="size-4" />
-            </motion.button>
+            </motion.a>
         </motion.div>
     );
 };
