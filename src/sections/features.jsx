@@ -1,5 +1,5 @@
 import SectionTitle from "../components/section-title";
-import { CodeIcon, DatabaseIcon, LayoutIcon, ArrowRightIcon } from "lucide-react";
+import { CodeIcon, DatabaseIcon, LayoutIcon } from "lucide-react";
 import { motion } from "framer-motion";
 import { useRef } from "react";
 
@@ -62,10 +62,6 @@ export default function Features() {
                         <p className="text-gray-100 pb-2 text-sm leading-relaxed">
                             {feature.description}
                         </p>
-                        <a href="#work" className="inline-flex items-center gap-2 text-sm font-medium text-purple-400 hover:text-white transition-colors group">
-                            View Projects
-                            <ArrowRightIcon className="size-4 group-hover:translate-x-1 transition-transform" />
-                        </a>
                     </motion.div>
                 ))}
             </div>
