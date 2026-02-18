@@ -37,6 +37,7 @@ export default function TrustedCompanies() {
                     <span>Instagram</span>
                 </div>
                 <div className="flex items-center gap-2 hover:text-white transition cursor-pointer">
+                    <img src="/assets/advan-logo.png" className="h-5 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition" alt="Advan" />
                     <span>Advan</span>
                 </div>
             </div>
